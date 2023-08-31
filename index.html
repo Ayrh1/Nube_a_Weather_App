@@ -5,7 +5,10 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <!--npx tailwindcss -i ./Assets/style/style.css -o ./dist/output.css --watch-->
+    <link href="./dist/output.css" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -26,17 +29,121 @@
 
 </head>
 
-<body>
+<body class = "flex flex-row bg-repeat-round" style="background-image: url(./Assets/images/background2.avif)">
 
+   <section id = "search-history" class = "flex flex-col basis-1/4 h-screen bg-repeat-round shadow-2xl shadow-slate-100 " style="background-image: url(./Assets/images/nightsky1.jpeg)">
 
+    <div id = "title" class = "flex items-end justify-left h-56 px-8 py-2">
+      <h1 class = "text-sky-200 text-center shrink justify-self-center font-serif font-bold text-6xl antialiased" >Nuvy</h1>
+      <img class = "w-16 shrink rounded-full "src = "./Assets/images/LogoIcon.jpeg">
+    </div>
 
+    <div id = "search" class = "flex items-center justify-center rounded-full pb-11">
+      <form class = "flex shrink w-10/12 bg-zinc-800 shadow-2xl  px-2 rounded-full  brightness-150">
+        <input type="text" class= "flex-grow  text-white w-10/12 md:w-120 bg-transparent rounded-full " placeholder = " Search City">
+        <button type = "submit" class = "self-end flex-none rounded-full " ><img class = "w-10 grayscale opacity-75 rounded-full "src = "./Assets/images/search-Icon3.png"></button>
+      </form>
+    </div>
 
+    <div class = "flex items-center justify-center flex-col">
+        <button class = "text-sky-100 text-center text-3xl font-serif antialiased bg-gradient-to-r from-sky-900 via-sky-300 to-sky-900 rounded-lg w-9/12 h-14 mb-2.5 shadow-inner shadow-slate-100">Sun Valley </button>
+        <button class = "text-sky-100 text-center text-3xl font-serif antialiased bg-gradient-to-r from-sky-900 via-sky-300 to-sky-900 rounded-lg w-9/12 h-14 mb-2.5 shadow-inner shadow-slate-100 ">San Francisco </button>
+        <button class = "text-sky-100 text-center text-3xl font-serif antialiased bg-gradient-to-r from-sky-900 via-sky-300 to-sky-900 rounded-lg w-9/12 h-14 mb-2.5 shadow-inner shadow-slate-100">Mexico City </button>
+    </div>
 
+  </section>
 
+  <section id = "results" class ="flex flex-col items-center basis-full h-auto ">
 
+    <div id = "cityToday" class = "w-4/5 h-60 border-8 border-solid border-sky-500 shadow-2xl shadow-sky-900 mt-12 mb-12 rounded-lg">
 
+      <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 mt-8 ">
+        <h2 class = "text-zinc-900 text-center justify-self-center font-serif font-bold text-6xl underline  decoration-double decoration-2 antialiased ">Sun Valley</h2>
+      </div>
 
-    
+      <div class = "flex flex-row justify-center items-center space-x-4 rounded-lg mt-4 ">
+        <p class = "w-4/12 h-24 text-center mx-2 bg-gradient-to-r from-sky-500 via-transparent to-sky-500 rounded-lg text-zinc-900 font-serif font-bold text-3xl pt-2 antialiased shadow-md shadow-slate-900">Temperature: <br> 70F</p>
+        <p class = "w-4/12 h-24 text-center mx-2 bg-gradient-to-r from-sky-500 via-transparent to-sky-500 rounded-lg text-zinc-900 font-serif font-bold text-3xl pt-2 antialiased shadow-md shadow-slate-900">Wind: <br>8.42 MPH</p>
+        <p class = "w-4/12 h-24 text-center mx-2 bg-gradient-to-r from-sky-500 via-transparent to-sky-500 rounded-lg text-zinc-900 font-serif font-bold text-3xl pt-2 antialiased shadow-md shadow-slate-900">Humidity: <br> 44%</p>
+      </div>
+
+    </div>
+
+    <div id = "cityWeekly" class = "flex flex-column w-4/5 h-96 shadow-2xl shadow-sky-900 border-8 border-solid border-sky-500 rounded-lg">
+
+      <div>
+        <h2 class = "h-16 text-zinc-900 text-left justify-self-center font-serif font-bold text-6xl 
+          antialiased underline decoration-double decoration-2 bg-gradient-to-r from-sky-500 to-transparent pl-4 ">5-Day Forcast</h2>
+      </div>
+      
+      <div class = "flex w-auto h-screen px-2 justify-around items-center">
+
+        <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 w-1/3 h-64 m-2 shadow-md shadow-slate-900">
+          <p class = "text-zinc-900 text-left text-3xl justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent mt-2 pl-4" >Date:</p>
+          <img class = "w-12 ml-4  rounded-full "src = "./Assets/images/weather-icon.jpeg">
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4 mt-2" >Temp: 70F</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4" >Wind: 8.42 MPH</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4"  >Humidity: 44%</p>
+        </div>
+
+        <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 w-1/3 h-64 m-2 shadow-md shadow-slate-900">
+          <p class = "text-zinc-900 text-left text-3xl justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent mt-2 pl-4" >Date:</p>
+          <img class = "w-12 ml-4  rounded-full "src = "./Assets/images/weather-icon.jpeg">
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4 mt-2" >Temp: 70F</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4" >Wind: 8.42 MPH</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4"  >Humidity: 44%</p>
+        </div>
+
+        <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 w-1/3 h-64 m-2 shadow-md shadow-slate-900">
+          <p class = "text-zinc-900 text-left text-3xl justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent mt-2 pl-4" >Date:</p>
+          <img class = "w-12 ml-4  rounded-full "src = "./Assets/images/weather-icon.jpeg">
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4 mt-2" >Temp: 70F</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4" >Wind: 8.42 MPH</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4"  >Humidity: 44%</p>
+        </div>
+
+        <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 w-1/3 h-64 m-2 shadow-md shadow-slate-900">
+          <p class = "text-zinc-900 text-left text-3xl justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent mt-2 pl-4" >Date:</p>
+          <img class = "w-12 ml-4  rounded-full "src = "./Assets/images/weather-icon.jpeg">
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4 mt-2" >Temp: 70F</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4" >Wind: 8.42 MPH</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4"  >Humidity: 44%</p>
+        </div>
+
+        <div class = "bg-gradient-to-r from-sky-500 via-transparent to-sky-500 w-1/3 h-64 m-2 shadow-md shadow-slate-900">
+          <p class = "text-zinc-900 text-left text-3xl justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent mt-2 pl-4" >Date:</p>
+          <img class = "w-12 ml-4  rounded-full "src = "./Assets/images/weather-icon.jpeg">
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4 mt-2" >Temp: 70F</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4" >Wind: 8.42 MPH</p>
+          <p class = "text-zinc-900 text-left text-lg justify-self-center font-serif font-bold 
+          antialiased bg-gradient-to-r from-sky-200 to-transparent pl-4"  >Humidity: 44%</p>
+        </div>
+
+      </div>
+      
+    </div>
+
+  </section>
+      
      <!-- Jquary-->
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
      <!--dau.js-->
