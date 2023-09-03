@@ -1,3 +1,34 @@
+// create event listener for form 
+// fetch request function
+
+
+
+
+
+// 'DOMContentLoaded' event handler 
+$(document).ready(function(){
+
+  $('#userSubmit').on('submit', function(event){
+    event.preventDefault();
+  console.log(event);
+  console.log(this);
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 Endpoint:
@@ -16,34 +47,6 @@ let FiveWeekCast = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}
 Current day cast 
 let curretnDayCast = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 */
-
-
-let weatherKey = "67524d354333919cc2f64508479d327c";
-
-
-$(function () {
-
-   $('body').on('click', function (event) {
-     console.log(event);
-    });
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 
  --- elements and classes for search history ---
