@@ -17,7 +17,7 @@ Nube is a weather app. User enter name of major city on search bar. Nube will th
 
 ## Deployment link
 
-https://ayrh1.github.io/Quiz/
+https://ayrh1.github.io/Nube_a_Weather_App/
 
 ## Credits
 
